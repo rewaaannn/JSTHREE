@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake API Data</title>
+</head>
+<body>
+    <style>
+      
+        
+        .task {
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+        }
+        .task.done {
+            background-color: #b2f5b2; 
+        }
+        button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      
+        input {
+            width: 200;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+
+    <div class="container">
+        <h3>To-Do List</h3>
+        <input type="text" id="taskInput" placeholder="Add your Task Here">
+        <button id="addTask">Add</button>
+        <div id="taskList"></div>
+    </div>
+
+  
+    <h1>Data Table</h1>
+    <table border="1" id="dataTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+  
+    <h2>Get Data by ID</h2>
+    <input type="number" id="userId" placeholder="Enter ID">
+    <button onclick="getDataById()">Get Data By ID</button>
+    <p id="userData"></p>
+  
+
+    <script src="./index.js"></script>
+</body>
+</html>
